@@ -1,0 +1,8 @@
+{# Renderizamos un campo #}
+
+{% macro render_field(field) %}
+
+<tp> {{field.label}} </tp>          {# Aquí renderizamos el campo #}
+<dp> {{field(**kwargs)|safe}} </dp> {# Le pasamos un diccionario de argumentos a field y lo mostramos como html con |safe #}
+
+{% endmacro %}
